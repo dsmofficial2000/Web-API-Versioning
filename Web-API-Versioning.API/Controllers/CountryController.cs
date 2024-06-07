@@ -4,7 +4,7 @@ using Web_API_Versioning.API.Models.DTOs;
 
 namespace Web_API_Versioning.API.V1.Controllers
 {
-    [Route("api/V1/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CountryController : ControllerBase
     {
@@ -14,11 +14,11 @@ namespace Web_API_Versioning.API.V1.Controllers
             var countryDomainModel = CountriesData.Get();
 
             //Map Domain to DTO
-            var response = new List<CountryDTOV1>();
+            var response = new List<CountryDTO>();
 
             foreach(var countryDomain  in countryDomainModel)
             {
-                response.Add(new CountryDTOV1
+                response.Add(new CountryDTO
                 {
                     Id = countryDomain.Id,
                     Name = countryDomain.Name,
