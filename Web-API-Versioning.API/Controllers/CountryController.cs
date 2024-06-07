@@ -4,7 +4,7 @@ using Web_API_Versioning.API.Models.DTOs;
 
 namespace Web_API_Versioning.API.V1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:ApiVersion}/[controller]")]
     [ApiController]
     [ApiVersion("1.0")]
     [ApiVersion("2.0")]
